@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.onlineshopingmall.entity.mapper.GoodsOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.onlineshopingmall.entity.domain.GoodsOrder">
+            <id property="orderId" column="order_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="merchantId" column="merchant_id" jdbcType="VARCHAR"/>
+            <result property="goodsId" column="goods_id" jdbcType="VARCHAR"/>
+            <result property="consigneePhone" column="consignee_phone" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="goodsPic" column="goods_pic" jdbcType="VARCHAR"/>
+            <result property="consigneeName" column="consignee_name" jdbcType="VARCHAR"/>
+            <result property="goodsName" column="goods_name" jdbcType="VARCHAR"/>
+            <result property="goodsQuantity" column="goods_quantity" jdbcType="INTEGER"/>
+            <result property="subPrice" column="sub_price" jdbcType="DECIMAL"/>
+            <result property="totalPrice" column="total_price" jdbcType="DECIMAL"/>
+            <result property="orderStatus" column="order_status" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+        <result property="addrId" column="addr_id" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id,user_id,addr_id,merchant_id,
+        goods_id,consignee_phone,address,
+        consignee_name,goods_name,goods_quantity,
+        sub_price,total_price,order_status,
+        create_time,update_time,is_deleted,goods_pic
+    </sql>
+</mapper>

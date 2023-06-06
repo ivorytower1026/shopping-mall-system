@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.onlineshopingmall.entity.mapper.UserCartMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.onlineshopingmall.entity.domain.UserCart">
+        <id property="cartId" column="cart_id" jdbcType="VARCHAR"/>
+        <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+        <result property="merchantId" column="merchant_id" jdbcType="VARCHAR"/>
+        <result property="goodsPic" column="goods_pic" jdbcType="VARCHAR"/>
+        <result property="consigneePhone" column="consignee_phone" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="consigneeName" column="consignee_name" jdbcType="VARCHAR"/>
+        <result property="goodsId" column="goods_id" jdbcType="VARCHAR"/>
+        <result property="goodsStatus" column="goods_status" jdbcType="TINYINT"/>
+        <result property="goodsQuantity" column="goods_quantity" jdbcType="INTEGER"/>
+        <result property="goodsName" column="goods_name" jdbcType="VARCHAR"/>
+        <result property="totalPrice" column="total_price" jdbcType="DECIMAL"/>
+        <result property="subPrice" column="sub_price" jdbcType="DECIMAL"/>
+        <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="addrId" column="addr_id" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cart_id,user_id,merchant_id,addr_id,
+        goods_id,goods_quantity,goods_name,
+        total_price,is_deleted,create_time,
+        update_time,sub_price,goods_pic,goods_statusconsignee_phone,address,
+        consignee_name
+    </sql>
+</mapper>
